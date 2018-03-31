@@ -4,8 +4,8 @@ Import this into your settings file, eg --
 from safelogging.settings import *
 
 """
-from loglimit import LogLimitFilter
-from allowed_hosts import suppress_allowed_hosts
+from .loglimit import LogLimitFilter
+from .allowed_hosts import suppress_allowed_hosts
 
 # one email per XX seconds
 LOGLIMIT_RATE = 10  

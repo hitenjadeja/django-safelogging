@@ -46,7 +46,7 @@ class LogLimitFilter(object):
                 max_keys = self.max_keys
                 duplicate = (key in self._errors and self._errors[key] >= min_date)
                 self._errors = dict(filter(lambda x: x[1] >= min_date, 
-                                          sorted(self._errors.items(), 
+                                          sorted(list(self._errors.items()), 
                                                  key=lambda x: x[1]))[0-max_keys:])
                 if not duplicate:
                     self._errors[key] = datetime.now()
